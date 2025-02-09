@@ -1,9 +1,12 @@
-import streamlit as st
 import os
+import streamlit as st
 from lunarcalendar import Lunar, Solar, Converter
 
 def modelName():
     return 'gpt-3.5-turbo-0125'
+
+def modelName4o():
+    return 'gpt-4o'
 
 def modelName_embedding_small():
     return 'text-embedding-3-small'
@@ -60,3 +63,27 @@ def lunar_to_solar(year, month, day, is_leap=False):
         return solar_date
     except ValueError:
         return None  # Handle invalid lunar date
+    
+def get_environment_variable(variable_name, default_value=None):
+    """
+    Retrieves the value of an environment variable.
+
+    Args:
+        variable_name: The name of the environment variable.
+        default_value: The value to return if the environment variable is not set. 
+                       If None (the default), a KeyError will be raised.
+
+    Returns:
+        The value of the environment variable, or the default value if it's not set.
+
+    Raises:
+        KeyError: If the environment variable is not set and no default value is provided.
+    """
+    try:
+        value = os.environ[variable_name]
+        return value
+    except KeyError:
+        if default_value is not None:
+            return default_value
+        else:
+            raise KeyError(f"Environment variable '{variable_name}' not set.")    

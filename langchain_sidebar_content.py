@@ -59,3 +59,32 @@ def LC_QuickStart_01_sidebar():
         - [OpenAI Error Types](https://help.openai.com/en/articles/6897213-openai-library-error-types-guidance)
     """
     )
+
+def LC_QuickStart_02_sidebar():
+    st.sidebar.header("LangChain QuickStart 02 🧐")
+    st.sidebar.markdown(
+        """
+        Tools : beautifulsoup4, WebBaseLoader, OpenAIEmbeddings, FAISS, RecursiveCharacterTextSplitter, create_stuff_documents_chain, create_retrieval_chain
+        \nRetrieval is useful when you have too much data to pass to the LLM directly. You can then use a retriever to fetch only the most relevant pieces and pass those in.
+        \nIn this process, we will look up relevant documents from a Retriever and then pass them into the prompt. A Retriever can be backed by anything - a SQL table, the internet, etc - but in this instance we will populate a vector store and use that as a retriever
+    """
+    )
+    st.sidebar.markdown(
+        """
+        ## Items to study in this example:
+
+        - [LangChain QuickStart](https://python.langchain.com/v0.1/docs/get_started/quickstart)
+        - [Vector stores](https://python.langchain.com/docs/modules/data_connection/vectorstores)
+        - [Bueatifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
+        - [WebBaseLoader](https://python.langchain.com/docs/integrations/document_loaders/web_base)
+        - [WebBaseLoader API](https://api.python.langchain.com/en/latest/document_loaders/langchain_community.document_loaders.web_base.WebBaseLoader.html)
+        - [OpenAI Embeddings](https://python.langchain.com/docs/integrations/text_embedding/openai)
+        - [FAISS](https://python.langchain.com/docs/integrations/vectorstores/faiss)
+        - [FAISS API](https://api.python.langchain.com/en/latest/vectorstores/langchain_community.vectorstores.faiss.FAISS.html)
+        - [RecursiveCharacterTextSplitter](https://python.langchain.com/docs/modules/data_connection/document_transformers/recursive_text_splitter)
+        - [RecursiveCharacterTextSplitter API](https://api.python.langchain.com/en/latest/character/langchain_text_splitters.character.RecursiveCharacterTextSplitter.html)
+        - [Chains](https://python.langchain.com/docs/modules/chains)
+        - [create_stuff_documents_chain API](https://api.python.langchain.com/en/latest/chains/langchain.chains.combine_documents.stuff.create_stuff_documents_chain.html)
+        - [create_retrival_chain API](https://api.python.langchain.com/en/latest/chains/langchain.chains.retrieval.create_retrieval_chain.html#)
+    """
+    )
