@@ -88,3 +88,62 @@ def LC_QuickStart_02_sidebar():
         - [create_retrival_chain API](https://api.python.langchain.com/en/latest/chains/langchain.chains.retrieval.create_retrieval_chain.html#)
     """
     )
+
+def LC_QuickStart_02_RemedialClass_sidebar():
+    st.sidebar.header("LangChain QuickStart 02 Remedial Class ✍🏻")
+    st.sidebar.markdown(
+        """
+        Tools : RecursiveCharacterTextSplitter() params, as_retriever() prams, VectorStore
+        \nIn this page, we will explore the parameters available for use in RecursiveCharacterTextSplitter() and as_retriever().
+    """
+    )
+    st.sidebar.markdown(
+        """
+        ## Items to study in this example:
+
+        - [Recursively split by character](https://python.langchain.com/v0.1/docs/modules/data_connection/document_transformers/recursive_text_splitter/)
+        - [Blog for RecursivelyCharacterTextSplitter](https://dev.to/eteimz/understanding-langchains-recursivecharactertextsplitter-2846)
+        - [RecursiveCharacterTextSplitter](https://python.langchain.com/docs/modules/data_connection/document_transformers/recursive_text_splitter)
+        - [RecursiveCharacterTextSplitter API](https://api.python.langchain.com/en/latest/character/langchain_text_splitters.character.RecursiveCharacterTextSplitter.html)
+        - [Vector stores](https://python.langchain.com/docs/modules/data_connection/vectorstores)
+        - [Vector Store API](https://api.python.langchain.com/en/latest/vectorstores/langchain_core.vectorstores.VectorStore.html)
+        - [Vector store backed retriever](https://python.langchain.com/v0.1/docs/modules/data_connection/retrievers/vectorstore/)
+    """
+    )
+
+def LC_QuickStart_03_CoversationRetrievalChain_sidebar():
+    st.sidebar.header("LangChain QuickStart 03 🗣️")
+    st.sidebar.markdown(
+        """
+        Tools : create_history_aware_retriever, MessagesPlaceholder, HumanMessage, AIMessage
+        \nThe previous chain can only handle single questions, but to accommodate follow-up questions in applications like chat bots, modifications are needed.
+        \nTwo adjustments are crucial
+        \n1. The retrieval method must consider the entire history, not just the latest input.
+        \n2. The final LLM chain should also incorporate the entire history.
+    """
+    )
+    st.sidebar.markdown(
+        """
+        ## Items to study in this example:
+
+        - [LangChain QuickStart](https://python.langchain.com/v0.1/docs/get_started/quickstart)
+        - [create_history_aware_retriever](https://api.python.langchain.com/en/latest/chains/langchain.chains.history_aware_retriever.create_history_aware_retriever.html)
+        - [Conversational RAG](https://python.langchain.com/v0.2/docs/tutorials/qa_chat_history/)
+        - [How to add chat history](https://python.langchain.com/v0.2/docs/how_to/qa_chat_history_how_to/)
+        - [How to stream results from your RAG application](https://python.langchain.com/v0.2/docs/how_to/qa_streaming/)
+        - [Add message history(memory)](https://python.langchain.com/v0.1/docs/expression_language/how_to/message_history/)
+        - [ConversationalRetrievalChain API](https://api.python.langchain.com/en/latest/chains/langchain.chains.conversational_retrieval.base.ConversationalRetrievalChain.html)
+        - [Types of MessagepromptTemplate](https://python.langchain.com/docs/modules/model_io/prompts/message_prompts)
+        - [MessagePlaceholder](https://api.python.langchain.com/en/latest/prompts/langchain_core.prompts.chat.MessagesPlaceholder.html)
+        - [HumanMessage](https://api.python.langchain.com/en/latest/messages/langchain_core.messages.human.HumanMessage.html)
+        - [AIMessage](https://api.python.langchain.com/en/v0.0.339/schema/langchain.schema.messages.AIMessage.html)
+    """
+    )
+    st.sidebar.markdown(
+        """
+        ## Youtube Clip
+
+        - [Youtube Clip](https://youtu.be/EQ6c9309T8c?si=pMUgmF4xMClk3SaI)
+    """
+    )
+
